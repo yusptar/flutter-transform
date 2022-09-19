@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'animation_flip_clock.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'The Matrix 3D'),
+      routes: {
+        'flip_clock': (_) => const MyFlipClock(),
+      },
+      home: const Home(),
     );
   }
 }
